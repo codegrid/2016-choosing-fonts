@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <title>test</title>
+  <link rel="stylesheet" href="all.css">
+</head>
+<body>
+
+  <table class="cols">
+    <tr>
+      <td class="col col-1">
+        <div>
+          <div class="f-name-ja"><span>ja:</span> </div>
+          <div class="f-name-en"><span>en:</span> </div>
+          <div class="memo"><span>memo:</span> </div>
+          <h2>Handlebarsを実行する</h2>
+          <p><a href="http://handlebarsjs.com/">Handlebars</a>は、<a href="https://mustache.github.io/">Mustache</a>を拡張したテンプレートエンジンです。クライアントのJavaScriptや、Node.js上でも利用することができます。なお、Handlebarsを使用してHTMLを描画する方法については、CodeGridの記事で高津戸が「<a href="https://app.codegrid.net/entry/handlebars">テンプレートエンジンのススメ Handlebars</a>」の中で解説しているので、Handlebarsに興味を持ったら参照してみてください。</p>
+          <p>冒頭で記述したように、Handlebars自体には、別々に分けたファイルを読み込むようなインクルード機能や、テンプレートの継承といった機能がありません。しかし、HandlebarsはHelperというテンプレートのカスタマイズ機能のようなものを備えているので、それらを利用するとインクルードやテンプレートの継承をすることが可能です。</p>
+          <p>小難しい話は置いておいて、まずはサンプルを見てください。Handlerbarsをgulpから使用して実際にHTMLを生成できるサンプルです。次のリポジトリからダウンロード、またはクローンできます。</p>
+          <p>gulpからHandlebarsを扱うには、gulp-hbを使用します。大本のHandlebarsでは、ファイルを読み込む形式のインクルードの機能がないのですが、gulp-hbでは、分割したファイルを読み込むことができます。また、テンプレートの継承をするためのヘルパーとしてhandlebars-layoutsを使用しています。</p>
+          <!--
+          <p>必要なモジュールは、package.jsonに記述してあるので、demo/handlebars/ディレクトリに移動して、npm installを実行すれば必要なモジュールがインストールされます。</p>
+          <p>また、gulpfile.jsの中では、Handlebarsのテンプレートファイル（拡張子がhbsのもの）の場所や、出力するファイルの拡張子、出力されるディレクトリなどを指定しています。</p>
+          -->
+          <p class="caption">各テンプレートでは、ここで指定した値を受け取り、Handlebarsのテンプレート構文を利用して書き出すことができます。文字列が指定されたsitenameとオブジェクトが指定されたauthor、配列が指定されたlistを、テンプレートで展開しているsrc/pages/page0.hbsは次のとおりです。</p>
+        </div>
+      </td>
+      <td class="col col-2">
+        <div>
+          <div class="f-name-ja"><span>ja:</span> </div>
+          <div class="f-name-en"><span>en:</span> </div>
+          <div class="memo"><span>memo:</span> </div>
+          <h2>Handlebarsを実行する</h2>
+          <p><a href="http://handlebarsjs.com/">Handlebars</a>は、<a href="https://mustache.github.io/">Mustache</a>を拡張したテンプレートエンジンです。クライアントのJavaScriptや、Node.js上でも利用することができます。なお、Handlebarsを使用してHTMLを描画する方法については、CodeGridの記事で高津戸が「<a href="https://app.codegrid.net/entry/handlebars">テンプレートエンジンのススメ Handlebars</a>」の中で解説しているので、Handlebarsに興味を持ったら参照してみてください。</p>
+          <p>冒頭で記述したように、Handlebars自体には、別々に分けたファイルを読み込むようなインクルード機能や、テンプレートの継承といった機能がありません。しかし、HandlebarsはHelperというテンプレートのカスタマイズ機能のようなものを備えているので、それらを利用するとインクルードやテンプレートの継承をすることが可能です。</p>
+          <p>小難しい話は置いておいて、まずはサンプルを見てください。Handlerbarsをgulpから使用して実際にHTMLを生成できるサンプルです。次のリポジトリからダウンロード、またはクローンできます。</p>
+          <p>gulpからHandlebarsを扱うには、gulp-hbを使用します。大本のHandlebarsでは、ファイルを読み込む形式のインクルードの機能がないのですが、gulp-hbでは、分割したファイルを読み込むことができます。また、テンプレートの継承をするためのヘルパーとしてhandlebars-layoutsを使用しています。</p>
+          <!--
+          <p>必要なモジュールは、package.jsonに記述してあるので、demo/handlebars/ディレクトリに移動して、npm installを実行すれば必要なモジュールがインストールされます。</p>
+          <p>また、gulpfile.jsの中では、Handlebarsのテンプレートファイル（拡張子がhbsのもの）の場所や、出力するファイルの拡張子、出力されるディレクトリなどを指定しています。</p>
+          -->
+          <p class="caption">各テンプレートでは、ここで指定した値を受け取り、Handlebarsのテンプレート構文を利用して書き出すことができます。文字列が指定されたsitenameとオブジェクトが指定されたauthor、配列が指定されたlistを、テンプレートで展開しているsrc/pages/page0.hbsは次のとおりです。</p>
+        </div>
+      </td>
+      <td class="col col-3">
+        <div>
+          <div class="f-name-ja"><span>ja:</span> </div>
+          <div class="f-name-en"><span>en:</span> </div>
+          <div class="memo"><span>memo:</span> </div>
+          <h2>Handlebarsを実行する</h2>
+          <p><a href="http://handlebarsjs.com/">Handlebars</a>は、<a href="https://mustache.github.io/">Mustache</a>を拡張したテンプレートエンジンです。クライアントのJavaScriptや、Node.js上でも利用することができます。なお、Handlebarsを使用してHTMLを描画する方法については、CodeGridの記事で高津戸が「<a href="https://app.codegrid.net/entry/handlebars">テンプレートエンジンのススメ Handlebars</a>」の中で解説しているので、Handlebarsに興味を持ったら参照してみてください。</p>
+          <p>冒頭で記述したように、Handlebars自体には、別々に分けたファイルを読み込むようなインクルード機能や、テンプレートの継承といった機能がありません。しかし、HandlebarsはHelperというテンプレートのカスタマイズ機能のようなものを備えているので、それらを利用するとインクルードやテンプレートの継承をすることが可能です。</p>
+          <p>小難しい話は置いておいて、まずはサンプルを見てください。Handlerbarsをgulpから使用して実際にHTMLを生成できるサンプルです。次のリポジトリからダウンロード、またはクローンできます。</p>
+          <p>gulpからHandlebarsを扱うには、gulp-hbを使用します。大本のHandlebarsでは、ファイルを読み込む形式のインクルードの機能がないのですが、gulp-hbでは、分割したファイルを読み込むことができます。また、テンプレートの継承をするためのヘルパーとしてhandlebars-layoutsを使用しています。</p>
+          <!--
+          <p>必要なモジュールは、package.jsonに記述してあるので、demo/handlebars/ディレクトリに移動して、npm installを実行すれば必要なモジュールがインストールされます。</p>
+          <p>また、gulpfile.jsの中では、Handlebarsのテンプレートファイル（拡張子がhbsのもの）の場所や、出力するファイルの拡張子、出力されるディレクトリなどを指定しています。</p>
+          -->
+          <p class="caption">各テンプレートでは、ここで指定した値を受け取り、Handlebarsのテンプレート構文を利用して書き出すことができます。文字列が指定されたsitenameとオブジェクトが指定されたauthor、配列が指定されたlistを、テンプレートで展開しているsrc/pages/page0.hbsは次のとおりです。</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="col col-4">
+        <div>
+          <div class="f-name-ja"><span>ja:</span> </div>
+          <div class="f-name-en"><span>en:</span> </div>
+          <div class="memo"><span>memo:</span> </div>
+          <h2>Handlebarsを実行する</h2>
+          <p><a href="http://handlebarsjs.com/">Handlebars</a>は、<a href="https://mustache.github.io/">Mustache</a>を拡張したテンプレートエンジンです。クライアントのJavaScriptや、Node.js上でも利用することができます。なお、Handlebarsを使用してHTMLを描画する方法については、CodeGridの記事で高津戸が「<a href="https://app.codegrid.net/entry/handlebars">テンプレートエンジンのススメ Handlebars</a>」の中で解説しているので、Handlebarsに興味を持ったら参照してみてください。</p>
+          <p>冒頭で記述したように、Handlebars自体には、別々に分けたファイルを読み込むようなインクルード機能や、テンプレートの継承といった機能がありません。しかし、HandlebarsはHelperというテンプレートのカスタマイズ機能のようなものを備えているので、それらを利用するとインクルードやテンプレートの継承をすることが可能です。</p>
+          <p>小難しい話は置いておいて、まずはサンプルを見てください。Handlerbarsをgulpから使用して実際にHTMLを生成できるサンプルです。次のリポジトリからダウンロード、またはクローンできます。</p>
+          <p>gulpからHandlebarsを扱うには、gulp-hbを使用します。大本のHandlebarsでは、ファイルを読み込む形式のインクルードの機能がないのですが、gulp-hbでは、分割したファイルを読み込むことができます。また、テンプレートの継承をするためのヘルパーとしてhandlebars-layoutsを使用しています。</p>
+          <!--
+          <p>必要なモジュールは、package.jsonに記述してあるので、demo/handlebars/ディレクトリに移動して、npm installを実行すれば必要なモジュールがインストールされます。</p>
+          <p>また、gulpfile.jsの中では、Handlebarsのテンプレートファイル（拡張子がhbsのもの）の場所や、出力するファイルの拡張子、出力されるディレクトリなどを指定しています。</p>
+          -->
+          <p class="caption">各テンプレートでは、ここで指定した値を受け取り、Handlebarsのテンプレート構文を利用して書き出すことができます。文字列が指定されたsitenameとオブジェクトが指定されたauthor、配列が指定されたlistを、テンプレートで展開しているsrc/pages/page0.hbsは次のとおりです。</p>
+        </div>
+      </td>
+      <td class="col col-5">
+        <div>
+          <div class="f-name-ja"><span>ja:</span> </div>
+          <div class="f-name-en"><span>en:</span> </div>
+          <div class="memo"><span>memo:</span> </div>
+          <h2>Handlebarsを実行する</h2>
+          <p><a href="http://handlebarsjs.com/">Handlebars</a>は、<a href="https://mustache.github.io/">Mustache</a>を拡張したテンプレートエンジンです。クライアントのJavaScriptや、Node.js上でも利用することができます。なお、Handlebarsを使用してHTMLを描画する方法については、CodeGridの記事で高津戸が「<a href="https://app.codegrid.net/entry/handlebars">テンプレートエンジンのススメ Handlebars</a>」の中で解説しているので、Handlebarsに興味を持ったら参照してみてください。</p>
+          <p>冒頭で記述したように、Handlebars自体には、別々に分けたファイルを読み込むようなインクルード機能や、テンプレートの継承といった機能がありません。しかし、HandlebarsはHelperというテンプレートのカスタマイズ機能のようなものを備えているので、それらを利用するとインクルードやテンプレートの継承をすることが可能です。</p>
+          <p>小難しい話は置いておいて、まずはサンプルを見てください。Handlerbarsをgulpから使用して実際にHTMLを生成できるサンプルです。次のリポジトリからダウンロード、またはクローンできます。</p>
+          <p>gulpからHandlebarsを扱うには、gulp-hbを使用します。大本のHandlebarsでは、ファイルを読み込む形式のインクルードの機能がないのですが、gulp-hbでは、分割したファイルを読み込むことができます。また、テンプレートの継承をするためのヘルパーとしてhandlebars-layoutsを使用しています。</p>
+          <!--
+          <p>必要なモジュールは、package.jsonに記述してあるので、demo/handlebars/ディレクトリに移動して、npm installを実行すれば必要なモジュールがインストールされます。</p>
+          <p>また、gulpfile.jsの中では、Handlebarsのテンプレートファイル（拡張子がhbsのもの）の場所や、出力するファイルの拡張子、出力されるディレクトリなどを指定しています。</p>
+          -->
+          <p class="caption">各テンプレートでは、ここで指定した値を受け取り、Handlebarsのテンプレート構文を利用して書き出すことができます。文字列が指定されたsitenameとオブジェクトが指定されたauthor、配列が指定されたlistを、テンプレートで展開しているsrc/pages/page0.hbsは次のとおりです。</p>
+        </div>
+      </td>
+      <td class="col col-6">
+        <div>
+          <div class="f-name-ja"><span>ja:</span> </div>
+          <div class="f-name-en"><span>en:</span> </div>
+          <div class="memo"><span>memo:</span> </div>
+          <h2>Handlebarsを実行する</h2>
+          <p><a href="http://handlebarsjs.com/">Handlebars</a>は、<a href="https://mustache.github.io/">Mustache</a>を拡張したテンプレートエンジンです。クライアントのJavaScriptや、Node.js上でも利用することができます。なお、Handlebarsを使用してHTMLを描画する方法については、CodeGridの記事で高津戸が「<a href="https://app.codegrid.net/entry/handlebars">テンプレートエンジンのススメ Handlebars</a>」の中で解説しているので、Handlebarsに興味を持ったら参照してみてください。</p>
+          <p>冒頭で記述したように、Handlebars自体には、別々に分けたファイルを読み込むようなインクルード機能や、テンプレートの継承といった機能がありません。しかし、HandlebarsはHelperというテンプレートのカスタマイズ機能のようなものを備えているので、それらを利用するとインクルードやテンプレートの継承をすることが可能です。</p>
+          <p>小難しい話は置いておいて、まずはサンプルを見てください。Handlerbarsをgulpから使用して実際にHTMLを生成できるサンプルです。次のリポジトリからダウンロード、またはクローンできます。</p>
+          <p>gulpからHandlebarsを扱うには、gulp-hbを使用します。大本のHandlebarsでは、ファイルを読み込む形式のインクルードの機能がないのですが、gulp-hbでは、分割したファイルを読み込むことができます。また、テンプレートの継承をするためのヘルパーとしてhandlebars-layoutsを使用しています。</p>
+          <!--
+          <p>必要なモジュールは、package.jsonに記述してあるので、demo/handlebars/ディレクトリに移動して、npm installを実行すれば必要なモジュールがインストールされます。</p>
+          <p>また、gulpfile.jsの中では、Handlebarsのテンプレートファイル（拡張子がhbsのもの）の場所や、出力するファイルの拡張子、出力されるディレクトリなどを指定しています。</p>
+          -->
+          <p class="caption">各テンプレートでは、ここで指定した値を受け取り、Handlebarsのテンプレート構文を利用して書き出すことができます。文字列が指定されたsitenameとオブジェクトが指定されたauthor、配列が指定されたlistを、テンプレートで展開しているsrc/pages/page0.hbsは次のとおりです。</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="col col-7">
+        <div>
+          <div class="f-name-ja"><span>ja:</span> </div>
+          <div class="f-name-en"><span>en:</span> </div>
+          <div class="memo"><span>memo:</span> </div>
+          <h2>Handlebarsを実行する</h2>
+          <p><a href="http://handlebarsjs.com/">Handlebars</a>は、<a href="https://mustache.github.io/">Mustache</a>を拡張したテンプレートエンジンです。クライアントのJavaScriptや、Node.js上でも利用することができます。なお、Handlebarsを使用してHTMLを描画する方法については、CodeGridの記事で高津戸が「<a href="https://app.codegrid.net/entry/handlebars">テンプレートエンジンのススメ Handlebars</a>」の中で解説しているので、Handlebarsに興味を持ったら参照してみてください。</p>
+          <p>冒頭で記述したように、Handlebars自体には、別々に分けたファイルを読み込むようなインクルード機能や、テンプレートの継承といった機能がありません。しかし、HandlebarsはHelperというテンプレートのカスタマイズ機能のようなものを備えているので、それらを利用するとインクルードやテンプレートの継承をすることが可能です。</p>
+          <p>小難しい話は置いておいて、まずはサンプルを見てください。Handlerbarsをgulpから使用して実際にHTMLを生成できるサンプルです。次のリポジトリからダウンロード、またはクローンできます。</p>
+          <p>gulpからHandlebarsを扱うには、gulp-hbを使用します。大本のHandlebarsでは、ファイルを読み込む形式のインクルードの機能がないのですが、gulp-hbでは、分割したファイルを読み込むことができます。また、テンプレートの継承をするためのヘルパーとしてhandlebars-layoutsを使用しています。</p>
+          <!--
+          <p>必要なモジュールは、package.jsonに記述してあるので、demo/handlebars/ディレクトリに移動して、npm installを実行すれば必要なモジュールがインストールされます。</p>
+          <p>また、gulpfile.jsの中では、Handlebarsのテンプレートファイル（拡張子がhbsのもの）の場所や、出力するファイルの拡張子、出力されるディレクトリなどを指定しています。</p>
+          -->
+          <p class="caption">各テンプレートでは、ここで指定した値を受け取り、Handlebarsのテンプレート構文を利用して書き出すことができます。文字列が指定されたsitenameとオブジェクトが指定されたauthor、配列が指定されたlistを、テンプレートで展開しているsrc/pages/page0.hbsは次のとおりです。</p>
+        </div>
+      </td>
+      <td class="col col-8">
+        <div>
+          <div class="f-name-ja"><span>ja:</span> </div>
+          <div class="f-name-en"><span>en:</span> </div>
+          <div class="memo"><span>memo:</span> </div>
+          <h2>Handlebarsを実行する</h2>
+          <p><a href="http://handlebarsjs.com/">Handlebars</a>は、<a href="https://mustache.github.io/">Mustache</a>を拡張したテンプレートエンジンです。クライアントのJavaScriptや、Node.js上でも利用することができます。なお、Handlebarsを使用してHTMLを描画する方法については、CodeGridの記事で高津戸が「<a href="https://app.codegrid.net/entry/handlebars">テンプレートエンジンのススメ Handlebars</a>」の中で解説しているので、Handlebarsに興味を持ったら参照してみてください。</p>
+          <p>冒頭で記述したように、Handlebars自体には、別々に分けたファイルを読み込むようなインクルード機能や、テンプレートの継承といった機能がありません。しかし、HandlebarsはHelperというテンプレートのカスタマイズ機能のようなものを備えているので、それらを利用するとインクルードやテンプレートの継承をすることが可能です。</p>
+          <p>小難しい話は置いておいて、まずはサンプルを見てください。Handlerbarsをgulpから使用して実際にHTMLを生成できるサンプルです。次のリポジトリからダウンロード、またはクローンできます。</p>
+          <p>gulpからHandlebarsを扱うには、gulp-hbを使用します。大本のHandlebarsでは、ファイルを読み込む形式のインクルードの機能がないのですが、gulp-hbでは、分割したファイルを読み込むことができます。また、テンプレートの継承をするためのヘルパーとしてhandlebars-layoutsを使用しています。</p>
+          <!--
+          <p>必要なモジュールは、package.jsonに記述してあるので、demo/handlebars/ディレクトリに移動して、npm installを実行すれば必要なモジュールがインストールされます。</p>
+          <p>また、gulpfile.jsの中では、Handlebarsのテンプレートファイル（拡張子がhbsのもの）の場所や、出力するファイルの拡張子、出力されるディレクトリなどを指定しています。</p>
+          -->
+          <p class="caption">各テンプレートでは、ここで指定した値を受け取り、Handlebarsのテンプレート構文を利用して書き出すことができます。文字列が指定されたsitenameとオブジェクトが指定されたauthor、配列が指定されたlistを、テンプレートで展開しているsrc/pages/page0.hbsは次のとおりです。</p>
+        </div>
+      </td>
+      <td class="col col-9">
+        <div>
+          <div class="f-name-ja"><span>ja:</span> </div>
+          <div class="f-name-en"><span>en:</span> </div>
+          <div class="memo"><span>memo:</span> </div>
+          <h2>Handlebarsを実行する</h2>
+          <p><a href="http://handlebarsjs.com/">Handlebars</a>は、<a href="https://mustache.github.io/">Mustache</a>を拡張したテンプレートエンジンです。クライアントのJavaScriptや、Node.js上でも利用することができます。なお、Handlebarsを使用してHTMLを描画する方法については、CodeGridの記事で高津戸が「<a href="https://app.codegrid.net/entry/handlebars">テンプレートエンジンのススメ Handlebars</a>」の中で解説しているので、Handlebarsに興味を持ったら参照してみてください。</p>
+          <p>冒頭で記述したように、Handlebars自体には、別々に分けたファイルを読み込むようなインクルード機能や、テンプレートの継承といった機能がありません。しかし、HandlebarsはHelperというテンプレートのカスタマイズ機能のようなものを備えているので、それらを利用するとインクルードやテンプレートの継承をすることが可能です。</p>
+          <p>小難しい話は置いておいて、まずはサンプルを見てください。Handlerbarsをgulpから使用して実際にHTMLを生成できるサンプルです。次のリポジトリからダウンロード、またはクローンできます。</p>
+          <p>gulpからHandlebarsを扱うには、gulp-hbを使用します。大本のHandlebarsでは、ファイルを読み込む形式のインクルードの機能がないのですが、gulp-hbでは、分割したファイルを読み込むことができます。また、テンプレートの継承をするためのヘルパーとしてhandlebars-layoutsを使用しています。</p>
+          <!--
+          <p>必要なモジュールは、package.jsonに記述してあるので、demo/handlebars/ディレクトリに移動して、npm installを実行すれば必要なモジュールがインストールされます。</p>
+          <p>また、gulpfile.jsの中では、Handlebarsのテンプレートファイル（拡張子がhbsのもの）の場所や、出力するファイルの拡張子、出力されるディレクトリなどを指定しています。</p>
+          -->
+          <p class="caption">各テンプレートでは、ここで指定した値を受け取り、Handlebarsのテンプレート構文を利用して書き出すことができます。文字列が指定されたsitenameとオブジェクトが指定されたauthor、配列が指定されたlistを、テンプレートで展開しているsrc/pages/page0.hbsは次のとおりです。</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="col col-10">
+        <div>
+          <div class="f-name-ja"><span>ja:</span> </div>
+          <div class="f-name-en"><span>en:</span> </div>
+          <div class="memo"><span>memo:</span> </div>
+          <h2>Handlebarsを実行する</h2>
+          <p><a href="http://handlebarsjs.com/">Handlebars</a>は、<a href="https://mustache.github.io/">Mustache</a>を拡張したテンプレートエンジンです。クライアントのJavaScriptや、Node.js上でも利用することができます。なお、Handlebarsを使用してHTMLを描画する方法については、CodeGridの記事で高津戸が「<a href="https://app.codegrid.net/entry/handlebars">テンプレートエンジンのススメ Handlebars</a>」の中で解説しているので、Handlebarsに興味を持ったら参照してみてください。</p>
+          <p>冒頭で記述したように、Handlebars自体には、別々に分けたファイルを読み込むようなインクルード機能や、テンプレートの継承といった機能がありません。しかし、HandlebarsはHelperというテンプレートのカスタマイズ機能のようなものを備えているので、それらを利用するとインクルードやテンプレートの継承をすることが可能です。</p>
+          <p>小難しい話は置いておいて、まずはサンプルを見てください。Handlerbarsをgulpから使用して実際にHTMLを生成できるサンプルです。次のリポジトリからダウンロード、またはクローンできます。</p>
+          <p>gulpからHandlebarsを扱うには、gulp-hbを使用します。大本のHandlebarsでは、ファイルを読み込む形式のインクルードの機能がないのですが、gulp-hbでは、分割したファイルを読み込むことができます。また、テンプレートの継承をするためのヘルパーとしてhandlebars-layoutsを使用しています。</p>
+          <!--
+          <p>必要なモジュールは、package.jsonに記述してあるので、demo/handlebars/ディレクトリに移動して、npm installを実行すれば必要なモジュールがインストールされます。</p>
+          <p>また、gulpfile.jsの中では、Handlebarsのテンプレートファイル（拡張子がhbsのもの）の場所や、出力するファイルの拡張子、出力されるディレクトリなどを指定しています。</p>
+          -->
+          <p class="caption">各テンプレートでは、ここで指定した値を受け取り、Handlebarsのテンプレート構文を利用して書き出すことができます。文字列が指定されたsitenameとオブジェクトが指定されたauthor、配列が指定されたlistを、テンプレートで展開しているsrc/pages/page0.hbsは次のとおりです。</p>
+        </div>
+      </td>
+      <td class="col col-11">
+        <div>
+          <div class="f-name-ja"><span>ja:</span> </div>
+          <div class="f-name-en"><span>en:</span> </div>
+          <div class="memo"><span>memo:</span> </div>
+          <h2>Handlebarsを実行する</h2>
+          <p><a href="http://handlebarsjs.com/">Handlebars</a>は、<a href="https://mustache.github.io/">Mustache</a>を拡張したテンプレートエンジンです。クライアントのJavaScriptや、Node.js上でも利用することができます。なお、Handlebarsを使用してHTMLを描画する方法については、CodeGridの記事で高津戸が「<a href="https://app.codegrid.net/entry/handlebars">テンプレートエンジンのススメ Handlebars</a>」の中で解説しているので、Handlebarsに興味を持ったら参照してみてください。</p>
+          <p>冒頭で記述したように、Handlebars自体には、別々に分けたファイルを読み込むようなインクルード機能や、テンプレートの継承といった機能がありません。しかし、HandlebarsはHelperというテンプレートのカスタマイズ機能のようなものを備えているので、それらを利用するとインクルードやテンプレートの継承をすることが可能です。</p>
+          <p>小難しい話は置いておいて、まずはサンプルを見てください。Handlerbarsをgulpから使用して実際にHTMLを生成できるサンプルです。次のリポジトリからダウンロード、またはクローンできます。</p>
+          <p>gulpからHandlebarsを扱うには、gulp-hbを使用します。大本のHandlebarsでは、ファイルを読み込む形式のインクルードの機能がないのですが、gulp-hbでは、分割したファイルを読み込むことができます。また、テンプレートの継承をするためのヘルパーとしてhandlebars-layoutsを使用しています。</p>
+          <!--
+          <p>必要なモジュールは、package.jsonに記述してあるので、demo/handlebars/ディレクトリに移動して、npm installを実行すれば必要なモジュールがインストールされます。</p>
+          <p>また、gulpfile.jsの中では、Handlebarsのテンプレートファイル（拡張子がhbsのもの）の場所や、出力するファイルの拡張子、出力されるディレクトリなどを指定しています。</p>
+          -->
+          <p class="caption">各テンプレートでは、ここで指定した値を受け取り、Handlebarsのテンプレート構文を利用して書き出すことができます。文字列が指定されたsitenameとオブジェクトが指定されたauthor、配列が指定されたlistを、テンプレートで展開しているsrc/pages/page0.hbsは次のとおりです。</p>
+        </div>
+      </td>
+      <td class="col col-12">
+        <div>
+          <div class="f-name-ja"><span>ja:</span> </div>
+          <div class="f-name-en"><span>en:</span> </div>
+          <div class="memo"><span>memo:</span> </div>
+          <h2>Handlebarsを実行する</h2>
+          <p><a href="http://handlebarsjs.com/">Handlebars</a>は、<a href="https://mustache.github.io/">Mustache</a>を拡張したテンプレートエンジンです。クライアントのJavaScriptや、Node.js上でも利用することができます。なお、Handlebarsを使用してHTMLを描画する方法については、CodeGridの記事で高津戸が「<a href="https://app.codegrid.net/entry/handlebars">テンプレートエンジンのススメ Handlebars</a>」の中で解説しているので、Handlebarsに興味を持ったら参照してみてください。</p>
+          <p>冒頭で記述したように、Handlebars自体には、別々に分けたファイルを読み込むようなインクルード機能や、テンプレートの継承といった機能がありません。しかし、HandlebarsはHelperというテンプレートのカスタマイズ機能のようなものを備えているので、それらを利用するとインクルードやテンプレートの継承をすることが可能です。</p>
+          <p>小難しい話は置いておいて、まずはサンプルを見てください。Handlerbarsをgulpから使用して実際にHTMLを生成できるサンプルです。次のリポジトリからダウンロード、またはクローンできます。</p>
+          <p>gulpからHandlebarsを扱うには、gulp-hbを使用します。大本のHandlebarsでは、ファイルを読み込む形式のインクルードの機能がないのですが、gulp-hbでは、分割したファイルを読み込むことができます。また、テンプレートの継承をするためのヘルパーとしてhandlebars-layoutsを使用しています。</p>
+          <!--
+          <p>必要なモジュールは、package.jsonに記述してあるので、demo/handlebars/ディレクトリに移動して、npm installを実行すれば必要なモジュールがインストールされます。</p>
+          <p>また、gulpfile.jsの中では、Handlebarsのテンプレートファイル（拡張子がhbsのもの）の場所や、出力するファイルの拡張子、出力されるディレクトリなどを指定しています。</p>
+          -->
+          <p class="caption">各テンプレートでは、ここで指定した値を受け取り、Handlebarsのテンプレート構文を利用して書き出すことができます。文字列が指定されたsitenameとオブジェクトが指定されたauthor、配列が指定されたlistを、テンプレートで展開しているsrc/pages/page0.hbsは次のとおりです。</p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="col col-13">
+        <div>
+          <div class="f-name-ja"><span>ja:</span> </div>
+          <div class="f-name-en"><span>en:</span> </div>
+          <div class="memo"><span>memo:</span> </div>
+          <h2>Handlebarsを実行する</h2>
+          <p><a href="http://handlebarsjs.com/">Handlebars</a>は、<a href="https://mustache.github.io/">Mustache</a>を拡張したテンプレートエンジンです。クライアントのJavaScriptや、Node.js上でも利用することができます。なお、Handlebarsを使用してHTMLを描画する方法については、CodeGridの記事で高津戸が「<a href="https://app.codegrid.net/entry/handlebars">テンプレートエンジンのススメ Handlebars</a>」の中で解説しているので、Handlebarsに興味を持ったら参照してみてください。</p>
+          <p>冒頭で記述したように、Handlebars自体には、別々に分けたファイルを読み込むようなインクルード機能や、テンプレートの継承といった機能がありません。しかし、HandlebarsはHelperというテンプレートのカスタマイズ機能のようなものを備えているので、それらを利用するとインクルードやテンプレートの継承をすることが可能です。</p>
+          <p>小難しい話は置いておいて、まずはサンプルを見てください。Handlerbarsをgulpから使用して実際にHTMLを生成できるサンプルです。次のリポジトリからダウンロード、またはクローンできます。</p>
+          <p>gulpからHandlebarsを扱うには、gulp-hbを使用します。大本のHandlebarsでは、ファイルを読み込む形式のインクルードの機能がないのですが、gulp-hbでは、分割したファイルを読み込むことができます。また、テンプレートの継承をするためのヘルパーとしてhandlebars-layoutsを使用しています。</p>
+          <!--
+          <p>必要なモジュールは、package.jsonに記述してあるので、demo/handlebars/ディレクトリに移動して、npm installを実行すれば必要なモジュールがインストールされます。</p>
+          <p>また、gulpfile.jsの中では、Handlebarsのテンプレートファイル（拡張子がhbsのもの）の場所や、出力するファイルの拡張子、出力されるディレクトリなどを指定しています。</p>
+          -->
+          <p class="caption">各テンプレートでは、ここで指定した値を受け取り、Handlebarsのテンプレート構文を利用して書き出すことができます。文字列が指定されたsitenameとオブジェクトが指定されたauthor、配列が指定されたlistを、テンプレートで展開しているsrc/pages/page0.hbsは次のとおりです。</p>
+        </div>
+      </td>
+      <td class="col col-14">
+        <div>
+          <div class="f-name-ja"><span>ja:</span> </div>
+          <div class="f-name-en"><span>en:</span> </div>
+          <div class="memo"><span>memo:</span> </div>
+          <h2>Handlebarsを実行する</h2>
+          <p><a href="http://handlebarsjs.com/">Handlebars</a>は、<a href="https://mustache.github.io/">Mustache</a>を拡張したテンプレートエンジンです。クライアントのJavaScriptや、Node.js上でも利用することができます。なお、Handlebarsを使用してHTMLを描画する方法については、CodeGridの記事で高津戸が「<a href="https://app.codegrid.net/entry/handlebars">テンプレートエンジンのススメ Handlebars</a>」の中で解説しているので、Handlebarsに興味を持ったら参照してみてください。</p>
+          <p>冒頭で記述したように、Handlebars自体には、別々に分けたファイルを読み込むようなインクルード機能や、テンプレートの継承といった機能がありません。しかし、HandlebarsはHelperというテンプレートのカスタマイズ機能のようなものを備えているので、それらを利用するとインクルードやテンプレートの継承をすることが可能です。</p>
+          <p>小難しい話は置いておいて、まずはサンプルを見てください。Handlerbarsをgulpから使用して実際にHTMLを生成できるサンプルです。次のリポジトリからダウンロード、またはクローンできます。</p>
+          <p>gulpからHandlebarsを扱うには、gulp-hbを使用します。大本のHandlebarsでは、ファイルを読み込む形式のインクルードの機能がないのですが、gulp-hbでは、分割したファイルを読み込むことができます。また、テンプレートの継承をするためのヘルパーとしてhandlebars-layoutsを使用しています。</p>
+          <!--
+          <p>必要なモジュールは、package.jsonに記述してあるので、demo/handlebars/ディレクトリに移動して、npm installを実行すれば必要なモジュールがインストールされます。</p>
+          <p>また、gulpfile.jsの中では、Handlebarsのテンプレートファイル（拡張子がhbsのもの）の場所や、出力するファイルの拡張子、出力されるディレクトリなどを指定しています。</p>
+          -->
+          <p class="caption">各テンプレートでは、ここで指定した値を受け取り、Handlebarsのテンプレート構文を利用して書き出すことができます。文字列が指定されたsitenameとオブジェクトが指定されたauthor、配列が指定されたlistを、テンプレートで展開しているsrc/pages/page0.hbsは次のとおりです。</p>
+        </div>
+      </td>
+      <td class="col col-15">
+        <div>
+          <div class="f-name-ja"><span>ja:</span> </div>
+          <div class="f-name-en"><span>en:</span> </div>
+          <div class="memo"><span>memo:</span> </div>
+          <h2>Handlebarsを実行する</h2>
+          <p><a href="http://handlebarsjs.com/">Handlebars</a>は、<a href="https://mustache.github.io/">Mustache</a>を拡張したテンプレートエンジンです。クライアントのJavaScriptや、Node.js上でも利用することができます。なお、Handlebarsを使用してHTMLを描画する方法については、CodeGridの記事で高津戸が「<a href="https://app.codegrid.net/entry/handlebars">テンプレートエンジンのススメ Handlebars</a>」の中で解説しているので、Handlebarsに興味を持ったら参照してみてください。</p>
+          <p>冒頭で記述したように、Handlebars自体には、別々に分けたファイルを読み込むようなインクルード機能や、テンプレートの継承といった機能がありません。しかし、HandlebarsはHelperというテンプレートのカスタマイズ機能のようなものを備えているので、それらを利用するとインクルードやテンプレートの継承をすることが可能です。</p>
+          <p>小難しい話は置いておいて、まずはサンプルを見てください。Handlerbarsをgulpから使用して実際にHTMLを生成できるサンプルです。次のリポジトリからダウンロード、またはクローンできます。</p>
+          <p>gulpからHandlebarsを扱うには、gulp-hbを使用します。大本のHandlebarsでは、ファイルを読み込む形式のインクルードの機能がないのですが、gulp-hbでは、分割したファイルを読み込むことができます。また、テンプレートの継承をするためのヘルパーとしてhandlebars-layoutsを使用しています。</p>
+          <!--
+          <p>必要なモジュールは、package.jsonに記述してあるので、demo/handlebars/ディレクトリに移動して、npm installを実行すれば必要なモジュールがインストールされます。</p>
+          <p>また、gulpfile.jsの中では、Handlebarsのテンプレートファイル（拡張子がhbsのもの）の場所や、出力するファイルの拡張子、出力されるディレクトリなどを指定しています。</p>
+          -->
+          <p class="caption">各テンプレートでは、ここで指定した値を受け取り、Handlebarsのテンプレート構文を利用して書き出すことができます。文字列が指定されたsitenameとオブジェクトが指定されたauthor、配列が指定されたlistを、テンプレートで展開しているsrc/pages/page0.hbsは次のとおりです。</p>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+
+</body>
+</html>

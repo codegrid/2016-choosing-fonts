@@ -1,0 +1,171 @@
+$anchor-color: #08f;
+
+$main-size: 16px;
+$main-line-height: 1.9em;
+
+$caption-size: 12px;
+$caption-line-height: 1.5em;
+
+@mixin f-a {
+  .f-name-ja:after { content:'ヒラギノ角ゴシック W3'; }
+  .f-name-en:after { content:'ヒラギノ角ゴシック W3'; }
+  .memo:after { content: 'for iOS'; }
+  font-family:'Hiragino Kaku Gothic Pro';
+}
+@mixin f-b {
+  .f-name-ja:after { content:'ヒラギノ角ゴシック W3'; }
+  .f-name-en:after { content:'Helvetica Neue'; }
+  .memo:after { content: 'for MAC OS X'; }
+  font-family:'Helvetica Neue', 'Hiragino Kaku Gothic Pro';
+}
+@mixin f-c {
+  .f-name-ja:after { content:'ヒラギノ角ゴシック W3'; }
+  .f-name-en:after { content:'Arial'; }
+  .memo:after { content: 'for MAC OS X and iOS7 and newer'; }
+  font-family:'Arial', 'Hiragino Kaku Gothic Pro';
+}
+@mixin f-d {
+  .f-name-ja:after { content:'游ゴシック'; }
+  .f-name-en:after { content:'游ゴシック'; }
+  .memo:after { content: '★ for MAC OS X 10.9 Mavericks and newer'; }
+  font-family:'游ゴシック', 'YuGothic';
+}
+@mixin f-e {
+  .f-name-ja:after { content:'游ゴシック'; }
+  .f-name-en:after { content:'Lucida Grande'; }
+  .memo:after { content: 'for MAC OS X 10.9 Mavericks and newer'; }
+  font-family:'Lucida Grande', 'YuGothic';
+}
+@mixin f-f {
+  .f-name-ja:after { content:'游ゴシック'; }
+  .f-name-en:after { content:'Arial'; }
+  .memo:after { content: 'for MAC OS X 10.9 Mavericks and Windows 8.1 and newer'; }
+  font-family:'Arial', '游ゴシック', 'YuGothic';
+}
+@mixin f-g {
+  .f-name-ja:after { content:'游ゴシック'; }
+  .f-name-en:after { content:'Helvetica Neue'; }
+  .memo:after { content: ''; }
+  font-family:'Helvetica Neue', '游ゴシック', 'YuGothic';
+}
+@mixin f-h {
+  .f-name-ja:after { content:'游ゴシック (指定はしているが実際はApple SD Gになっている)'; }
+  .f-name-en:after { content:'Apple SD Gothic Neo'; }
+  .memo:after { content: 'Apple SD Gが日本語を持っているのでunicode-rangeの指定をしないと欧文のみに指定ができない'; }
+  font-family:'Apple SD Gothic Neo', 'YuGothic';
+}
+@mixin f-i {
+  .f-name-ja:after { content:'游ゴシック'; }
+  .f-name-en:after { content:'Avenir Next'; }
+  .memo:after { content: 'for MAC OS X 10.9 Mavericks and newer. win上での游ゴはとても薄い…'; }
+  font-family:'Avenir Next', 'YuGothic';
+}
+@mixin f-j {
+  .f-name-ja:after { content:'游ゴシック UI'; }
+  .f-name-en:after { content:'游ゴシック UI'; }
+  .memo:after { content: 'for Windows 7 and newer'; }
+  font-family:'YuGothic UI';
+}
+@mixin f-k {
+  .f-name-ja:after { content:'メイリオUI'; }
+  .f-name-en:after { content:'メイリオUI'; }
+  .memo:after { content: 'for Windows 7 and older'; }
+  font-family:'Meiryo UI';
+}
+@mixin f-l {
+  .f-name-ja:after { content:'メイリオ'; }
+  .f-name-en:after { content:'メイリオ'; }
+  .memo:after { content: 'for Windows 7 and older'; }
+  font-family:'Meiryo', 'メイリオ';
+}
+@mixin f-m {
+  .f-name-ja:after { content:'Noto Sans'; }
+  .f-name-en:after { content:'Noto Sans'; }
+  .memo:after { content: 'for MAC OS X optionally'; }
+  font-family:'Noto Sans Japanese';
+}
+@mixin f-n {
+  .f-name-ja:after { content:'Noto Sans CJK jp'; }
+  .f-name-en:after { content:'Noto Sans CJK jp'; }
+  .memo:after { content: 'for Android 6'; }
+  font-family:'NotoSansCJKjp';
+}
+@mixin f-o {
+}
+
+// ====================================
+
+body {
+  background-color: #fff;
+}
+
+a {
+  color: $anchor-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.cols {
+  border-collapse: collapse;
+
+  .col-1 { @include f-a; }
+  .col-2 { @include f-b; }
+  .col-3 { @include f-c; }
+  .col-4 { @include f-d; }
+  .col-5 { @include f-e; }
+  .col-6 { @include f-f; }
+  .col-7 { @include f-g; }
+  .col-8 { @include f-h; }
+  .col-9 { @include f-i; }
+  .col-10 { @include f-j; }
+  .col-11 { @include f-k; }
+  .col-12 { @include f-l; }
+  .col-13 { @include f-m; }
+  .col-14 { @include f-n; }
+  .col-15 { @include f-o; }
+
+  .col {
+    vertical-align: top;
+    border: 1px solid #ddd;
+    padding: 3em;
+
+    & > div {
+      width: 34em;
+
+      .f-name-ja,
+      .f-name-en,
+      .memo {
+        font-size: 12px;
+        span {
+          background-color: #ccc;
+          border-radius: 2px;
+          color: #333;
+          display: inline-block;
+          width: 4em;
+          line-height: 1.3em;
+          text-align: center;
+        }
+      }
+
+      h2 {
+        margin: 2em 0;
+      }
+
+      p {
+        font-size: $main-size;
+        line-height: $main-line-height;
+        margin-bottom: $main-line-height;
+      }
+
+      .caption {
+        font-size: $caption-size;
+        line-height: $caption-line-height;
+      }
+    }
+  }
+}
+
+
